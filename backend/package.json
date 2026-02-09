@@ -1,0 +1,14 @@
+{
+  "name": "recycling-manager-backend",
+  "version": "1.0.0",
+  "description": "Backend scripts for data generation",
+  "main": "generate_data.js",
+  "scripts": {
+    "generate": "node generate_data.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.0.0",
+    "dotenv": "^17.2.4",
+    "groq-sdk": "^0.37.0"
+  }
+}
