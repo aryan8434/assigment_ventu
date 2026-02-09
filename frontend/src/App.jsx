@@ -56,13 +56,13 @@ function App() {
       </AppShell.Header>
 
       <AppShell.Navbar p="md">
-        <Tabs defaultValue="top10">
+        <Tabs defaultValue="top10" h="100%" display="flex" styles={{ root: { display: 'flex', flexDirection: 'column' } }}>
           <Tabs.List mb="sm">
             <Tabs.Tab value="top10">Top 10</Tabs.Tab>
             <Tabs.Tab value="all">All Candidates</Tabs.Tab>
           </Tabs.List>
 
-          <Tabs.Panel value="top10">
+          <Tabs.Panel value="top10" flex={1} style={{ minHeight: 0, overflow: 'hidden' }}>
             <Leaderboard 
               candidates={sortedCandidates.slice(0, 10)} 
               onSelect={setSelectedCandidateId} 
@@ -70,7 +70,7 @@ function App() {
             />
           </Tabs.Panel>
 
-          <Tabs.Panel value="all">
+          <Tabs.Panel value="all" flex={1} style={{ minHeight: 0, overflow: 'hidden' }}>
             <Leaderboard 
               candidates={sortedCandidates} 
               onSelect={setSelectedCandidateId} 
